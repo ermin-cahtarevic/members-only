@@ -1,14 +1,14 @@
 module SessionsHelper
 
   def log_in(user)
-    sessions[:user_id] = user.id
+    session[:user_id] = user.id
   end
 
   def log_out
     @current_user = nil
     cookies[:remember_token] = nil
     cookies[:user_id] = nil
-    sessions[:user_id] = nil
+    session[:user_id] = nil
   end
 
   def logged_in?
