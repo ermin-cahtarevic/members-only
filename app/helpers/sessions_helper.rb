@@ -5,10 +5,15 @@ module SessionsHelper
   end
 
   def log_out
+    forget(current_user)
+    session.delete(:user_id)
     @current_user = nil
-    cookies[:remember_token] = nil
-    cookies[:user_id] = nil
-    session[:user_id] = nil
+  end
+
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
   end
 
   def logged_in?
