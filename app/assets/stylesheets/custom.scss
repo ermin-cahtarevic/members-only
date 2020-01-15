@@ -1,2 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+nav {
+  width: 50%;
+}
+
+.member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacing {
+  height: 40px;
+}
+
+.post-list {
+  margin: 10px 15px;
+}
+
+.post-heading {
+  margin: 30px 15px 10px;
+}
