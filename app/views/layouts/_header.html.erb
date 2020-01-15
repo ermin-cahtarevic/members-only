@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container member">
-    <%= link_to "Members Only", '#', class: "logo" %>
-    <nav>
+  <div class="container-fluid">
+    <nav class="member" >
+      <%= link_to "Members Only", '#', class: "logo" %>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", '#' %></li>
+        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to 'Posts', posts_path %></li>
         <% if logged_in? %>
           <li><%= link_to 'Create post', new_post_path %></li>

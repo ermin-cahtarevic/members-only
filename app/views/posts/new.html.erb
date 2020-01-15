@@ -1,13 +1,16 @@
 <%provide(:title, "Create post")%>
-<h1> Create_post </h1>
 
-<%=form_for(:posts, url:  posts_path ) do |f| %>
-  <%=f.label :title %>
-  <%= f.text_field :title%>
+<div class="form-wrap">
+  <h1 class="h1-heading"> Create post </h1>
 
-  <%= f.label :body %>
-  <%= f.text_area :body%>
+  <%=form_for(:posts, url:  posts_path, html: { class: 'form-style' } ) do |f| %>
+    <%=f.label :title, class: 'form-label' %> <br>
+    <%= f.text_field :title, class: 'form-input' %> <br>
 
-  <%= f.submit "Create post"%>
-  
-<% end %>
+    <%= f.label :body, class: 'form-label' %> <br>
+    <%= f.text_area :body, class: 'form-input' %> <br>
+
+    <%= f.submit "Create post", class: 'form-btn' %>
+    
+  <% end %>
+</div>
