@@ -1,0 +1,21 @@
+<%provide(:title, "Sign up")%>
+<div class="form-wrap">
+  <h1 class="h1-heading" > Sign up </h1>
+
+  <%=form_for(:users, url: signup_path, html: { class: 'form-style' } ) do |f| %>
+    <%= f.label :name, class: 'form-label' %> <br>
+    <%= f.text_field :name, class: 'form-input' %> <br>
+
+    <%= f.label :email, class: 'form-label' %> <br>
+    <%= f.email_field :email, class: 'form-input' %> <br>
+
+    <%= f.label :password, class: 'form-label' %> <br>
+    <%= f.password_field :password, class: 'form-input' %> <br>
+
+    <%= f.label :password_confirmation, class: 'form-label' %> <br>
+    <%= f.password_field :password_confirmation, class: 'form-input' %> <br>
+
+    <%= f.submit "Sign up", class: 'form-btn'%>
+    
+  <% end %>
+</div>
