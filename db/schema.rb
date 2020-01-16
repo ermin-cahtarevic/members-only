@@ -28,4 +28,6 @@ ActiveRecord::Schema.define(version: 20_200_114_205_755) do
     t.datetime 'updated_at', null: false
     t.string 'remember_digest'
   end
+
+  add_foreign_key "posts", "users"
 end
